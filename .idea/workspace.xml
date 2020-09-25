@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc35c70b-0fa9-4e41-a09a-df87daef3fd5" name="Default Changelist" comment="" />
+    <list default="true" id="fc35c70b-0fa9-4e41-a09a-df87daef3fd5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/surveiliaFrontEnd.py" beforeDir="false" afterPath="$PROJECT_DIR$/surveiliaFrontEnd.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +17,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1hShgnUb4guyOO6lZlozyyHHmmP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -24,7 +31,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
-  <component name="RunManager" selected="Python.other">
+  <component name="RunManager" selected="Python.controlMainScreen">
     <configuration name="addNewUser" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="surveilia" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -67,7 +74,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="extra" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="controlMainScreen" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="surveilia" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -79,7 +86,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/extra.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/controlMainScreen.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -132,11 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.controlMainScreen" />
         <item itemvalue="Python.other" />
         <item itemvalue="Python.adminMain" />
         <item itemvalue="Python.loginscreen" />
         <item itemvalue="Python.addNewUser" />
-        <item itemvalue="Python.extra" />
       </list>
     </recent_temporary>
   </component>
@@ -158,22 +165,22 @@
       <screen x="0" y="0" width="1617" height="880" />
     </state>
     <state x="759" y="265" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1617.880@0.0.1617.880" timestamp="1600010685050" />
-    <state width="1595" height="160" key="GridCell.Tab.0.bottom" timestamp="1600937003745">
+    <state width="1160" height="213" key="GridCell.Tab.0.bottom" timestamp="1601048226198">
       <screen x="0" y="0" width="1617" height="880" />
     </state>
-    <state width="1595" height="160" key="GridCell.Tab.0.bottom/0.0.1617.880@0.0.1617.880" timestamp="1600937003745" />
-    <state width="1595" height="160" key="GridCell.Tab.0.center" timestamp="1600937003745">
+    <state width="1160" height="213" key="GridCell.Tab.0.bottom/0.0.1617.880@0.0.1617.880" timestamp="1601048226198" />
+    <state width="1160" height="213" key="GridCell.Tab.0.center" timestamp="1601048226198">
       <screen x="0" y="0" width="1617" height="880" />
     </state>
-    <state width="1595" height="160" key="GridCell.Tab.0.center/0.0.1617.880@0.0.1617.880" timestamp="1600937003745" />
-    <state width="1595" height="160" key="GridCell.Tab.0.left" timestamp="1600937003745">
+    <state width="1160" height="213" key="GridCell.Tab.0.center/0.0.1617.880@0.0.1617.880" timestamp="1601048226198" />
+    <state width="1160" height="213" key="GridCell.Tab.0.left" timestamp="1601048226198">
       <screen x="0" y="0" width="1617" height="880" />
     </state>
-    <state width="1595" height="160" key="GridCell.Tab.0.left/0.0.1617.880@0.0.1617.880" timestamp="1600937003745" />
-    <state width="1595" height="160" key="GridCell.Tab.0.right" timestamp="1600937003745">
+    <state width="1160" height="213" key="GridCell.Tab.0.left/0.0.1617.880@0.0.1617.880" timestamp="1601048226198" />
+    <state width="1160" height="213" key="GridCell.Tab.0.right" timestamp="1601048226198">
       <screen x="0" y="0" width="1617" height="880" />
     </state>
-    <state width="1595" height="160" key="GridCell.Tab.0.right/0.0.1617.880@0.0.1617.880" timestamp="1600937003745" />
+    <state width="1160" height="213" key="GridCell.Tab.0.right/0.0.1617.880@0.0.1617.880" timestamp="1601048226198" />
     <state width="1595" height="349" key="GridCell.Tab.1.bottom" timestamp="1600777098825">
       <screen x="0" y="0" width="1617" height="880" />
     </state>
@@ -194,10 +201,10 @@
       <screen x="0" y="0" width="1617" height="880" />
     </state>
     <state x="0" y="0" key="SettingsEditor/0.0.1617.880@0.0.1617.880" timestamp="1600868284468" />
-    <state x="898" y="263" key="com.intellij.ide.util.TipDialog" timestamp="1600846953774">
+    <state x="898" y="263" key="com.intellij.ide.util.TipDialog" timestamp="1601047359765">
       <screen x="0" y="0" width="1617" height="880" />
     </state>
-    <state x="898" y="263" key="com.intellij.ide.util.TipDialog/0.0.1617.880@0.0.1617.880" timestamp="1600846953774" />
+    <state x="898" y="263" key="com.intellij.ide.util.TipDialog/0.0.1617.880@0.0.1617.880" timestamp="1601047359765" />
     <state x="1085" y="877" width="672" height="678" key="search.everywhere.popup" timestamp="1600850978959">
       <screen x="0" y="0" width="1617" height="880" />
     </state>

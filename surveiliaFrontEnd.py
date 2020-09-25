@@ -922,22 +922,10 @@ class Ui_surveiliaFrontEnd(object):
         surveiliaFrontEnd.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(surveiliaFrontEnd)
-        self.mainStackedWidget.setCurrentIndex(1)
+        self.mainStackedWidget.setCurrentIndex(0)
         self.menuStackedWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(surveiliaFrontEnd)
-        ###################################################################################################
-        self.login1_pushButton.clicked.connect(lambda: self.mainStackedWidget.setCurrentIndex(1))
-        self.logout_toolButton.clicked.connect(lambda: self.mainStackedWidget.setCurrentIndex(2))
-        self.loginAgain_pushButton_3.clicked.connect(lambda: self.mainStackedWidget.setCurrentIndex(0))
 
-        ####################################################################################################
-        self.camera_toolButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(0))
-        self.alarm_toolButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(1))
-        self.storage_toolButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(2))
-        self.account_toolButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(3))
-        self.users_toolButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(4))
-        self.help_toolButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(5))
-        self.userAdd_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(6))
     def retranslateUi(self, surveiliaFrontEnd):
         _translate = QtCore.QCoreApplication.translate
         surveiliaFrontEnd.setWindowTitle(_translate("surveiliaFrontEnd", "MainWindow"))
