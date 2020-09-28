@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fc35c70b-0fa9-4e41-a09a-df87daef3fd5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/surveiliaFrontEnd.py" beforeDir="false" afterPath="$PROJECT_DIR$/surveiliaFrontEnd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controlMainScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/controlMainScreen.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,27 +32,6 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunManager" selected="Python.controlMainScreen">
-    <configuration name="addNewUser" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="surveilia" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/addNewUser.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="adminMain" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="surveilia" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -95,7 +74,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="loginscreen" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="neww" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="surveilia" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -107,7 +86,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/loginscreen.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/neww.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -137,13 +116,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="surveiliaFrontEnd" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="surveilia" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/surveiliaFrontEnd.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.controlMainScreen" />
+        <item itemvalue="Python.neww" />
+        <item itemvalue="Python.surveiliaFrontEnd" />
         <item itemvalue="Python.other" />
         <item itemvalue="Python.adminMain" />
-        <item itemvalue="Python.loginscreen" />
-        <item itemvalue="Python.addNewUser" />
       </list>
     </recent_temporary>
   </component>
@@ -165,46 +165,46 @@
       <screen x="0" y="0" width="1617" height="880" />
     </state>
     <state x="759" y="265" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1617.880@0.0.1617.880" timestamp="1600010685050" />
-    <state width="1160" height="213" key="GridCell.Tab.0.bottom" timestamp="1601048226198">
+    <state width="1052" height="212" key="GridCell.Tab.0.bottom" timestamp="1601335592546">
       <screen x="0" y="0" width="1617" height="880" />
     </state>
-    <state width="1160" height="213" key="GridCell.Tab.0.bottom/0.0.1617.880@0.0.1617.880" timestamp="1601048226198" />
-    <state width="1160" height="213" key="GridCell.Tab.0.center" timestamp="1601048226198">
+    <state width="1052" height="212" key="GridCell.Tab.0.bottom/0.0.1617.880@0.0.1617.880" timestamp="1601335592546" />
+    <state width="1052" height="212" key="GridCell.Tab.0.center" timestamp="1601335592545">
       <screen x="0" y="0" width="1617" height="880" />
     </state>
-    <state width="1160" height="213" key="GridCell.Tab.0.center/0.0.1617.880@0.0.1617.880" timestamp="1601048226198" />
-    <state width="1160" height="213" key="GridCell.Tab.0.left" timestamp="1601048226198">
+    <state width="1052" height="212" key="GridCell.Tab.0.center/0.0.1617.880@0.0.1617.880" timestamp="1601335592545" />
+    <state width="1052" height="212" key="GridCell.Tab.0.left" timestamp="1601335592545">
       <screen x="0" y="0" width="1617" height="880" />
     </state>
-    <state width="1160" height="213" key="GridCell.Tab.0.left/0.0.1617.880@0.0.1617.880" timestamp="1601048226198" />
-    <state width="1160" height="213" key="GridCell.Tab.0.right" timestamp="1601048226198">
+    <state width="1052" height="212" key="GridCell.Tab.0.left/0.0.1617.880@0.0.1617.880" timestamp="1601335592545" />
+    <state width="1052" height="212" key="GridCell.Tab.0.right" timestamp="1601335592546">
       <screen x="0" y="0" width="1617" height="880" />
     </state>
-    <state width="1160" height="213" key="GridCell.Tab.0.right/0.0.1617.880@0.0.1617.880" timestamp="1601048226198" />
-    <state width="1595" height="349" key="GridCell.Tab.1.bottom" timestamp="1600777098825">
+    <state width="1052" height="212" key="GridCell.Tab.0.right/0.0.1617.880@0.0.1617.880" timestamp="1601335592546" />
+    <state width="1506" height="248" key="GridCell.Tab.1.bottom" timestamp="1601124619061">
       <screen x="0" y="0" width="1617" height="880" />
     </state>
-    <state width="1595" height="349" key="GridCell.Tab.1.bottom/0.0.1617.880@0.0.1617.880" timestamp="1600777098825" />
-    <state width="1595" height="349" key="GridCell.Tab.1.center" timestamp="1600777098825">
+    <state width="1506" height="248" key="GridCell.Tab.1.bottom/0.0.1617.880@0.0.1617.880" timestamp="1601124619061" />
+    <state width="1506" height="248" key="GridCell.Tab.1.center" timestamp="1601124619061">
       <screen x="0" y="0" width="1617" height="880" />
     </state>
-    <state width="1595" height="349" key="GridCell.Tab.1.center/0.0.1617.880@0.0.1617.880" timestamp="1600777098825" />
-    <state width="1595" height="349" key="GridCell.Tab.1.left" timestamp="1600777098824">
+    <state width="1506" height="248" key="GridCell.Tab.1.center/0.0.1617.880@0.0.1617.880" timestamp="1601124619061" />
+    <state width="1506" height="248" key="GridCell.Tab.1.left" timestamp="1601124619061">
       <screen x="0" y="0" width="1617" height="880" />
     </state>
-    <state width="1595" height="349" key="GridCell.Tab.1.left/0.0.1617.880@0.0.1617.880" timestamp="1600777098824" />
-    <state width="1595" height="349" key="GridCell.Tab.1.right" timestamp="1600777098825">
+    <state width="1506" height="248" key="GridCell.Tab.1.left/0.0.1617.880@0.0.1617.880" timestamp="1601124619061" />
+    <state width="1506" height="248" key="GridCell.Tab.1.right" timestamp="1601124619061">
       <screen x="0" y="0" width="1617" height="880" />
     </state>
-    <state width="1595" height="349" key="GridCell.Tab.1.right/0.0.1617.880@0.0.1617.880" timestamp="1600777098825" />
+    <state width="1506" height="248" key="GridCell.Tab.1.right/0.0.1617.880@0.0.1617.880" timestamp="1601124619061" />
     <state x="0" y="0" key="SettingsEditor" timestamp="1600868284468">
       <screen x="0" y="0" width="1617" height="880" />
     </state>
     <state x="0" y="0" key="SettingsEditor/0.0.1617.880@0.0.1617.880" timestamp="1600868284468" />
-    <state x="898" y="263" key="com.intellij.ide.util.TipDialog" timestamp="1601047359765">
+    <state x="898" y="263" key="com.intellij.ide.util.TipDialog" timestamp="1601109711268">
       <screen x="0" y="0" width="1617" height="880" />
     </state>
-    <state x="898" y="263" key="com.intellij.ide.util.TipDialog/0.0.1617.880@0.0.1617.880" timestamp="1601047359765" />
+    <state x="898" y="263" key="com.intellij.ide.util.TipDialog/0.0.1617.880@0.0.1617.880" timestamp="1601109711268" />
     <state x="1085" y="877" width="672" height="678" key="search.everywhere.popup" timestamp="1600850978959">
       <screen x="0" y="0" width="1617" height="880" />
     </state>

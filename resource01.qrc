@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="logo">
+    <file>play-24.png</file>
     <file>surveilialogo.PNG</file>
   </qresource>
   <qresource prefix="menubar">
