@@ -35,7 +35,7 @@ class ControlMainWindow(qtw.QMainWindow, Ui_surveiliaFrontEnd):
         self.help_toolButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(5))
         self.userAdd_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(6))
 
-        ########################OPEN AND PLAY VIDEO###############################################
+        ######################## OPEN AND PLAY VIDEO ###############################################
 
         # create media player object
         self.mediaPlayer = QMediaPlayer(None, QMediaPlayer.VideoSurface)
@@ -44,6 +44,8 @@ class ControlMainWindow(qtw.QMainWindow, Ui_surveiliaFrontEnd):
 
         self.play_pushButton.clicked.connect(self.playVideo)
         self.openVideo_pushButton.clicked.connect(self.openFile)
+
+        self.cancel_pushButton_3.clicked.connect(self.close)
 
         # self.mediaPlayer.stateChanged.connect(self.mediastate_changed)
 
@@ -70,7 +72,6 @@ class ControlMainWindow(qtw.QMainWindow, Ui_surveiliaFrontEnd):
     #         self.play_pushButton.setIcon(
     #             self.style().standardIcon(QStyle.SP_MediaPlay)
     #         )
-    #
 
 
 if __name__ == "__main__":
