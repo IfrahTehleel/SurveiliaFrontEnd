@@ -50,7 +50,7 @@ class ControlMainWindow(qtw.QMainWindow, Ui_surveiliaFrontEnd):
         # self.mediaPlayer.stateChanged.connect(self.mediastate_changed)
 
     def openFile(self):
-        fileName, _ = QFileDialog.getOpenFileName(self, "Open Video")
+        fileName, _ = QFileDialog.getOpenFileName(self, "Open Video", "",  "Video Files (*.mp4 *.flv *.ts *.mts *.avi *.wmv)")
 
         if fileName != '':
             self.mediaPlayer.setMedia(QMediaContent(QUrl.fromLocalFile(fileName)))
