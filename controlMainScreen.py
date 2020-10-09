@@ -10,7 +10,19 @@ import os
 from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent
 from PyQt5.QtMultimediaWidgets import QVideoWidget
 from PyQt5.QtWidgets import QPushButton
-
+#import pyrebase
+# firebaseConfig={
+#     'apiKey': "AIzaSyCie_t3hdNbn6zTLmO0NPgJs2nm-jFxxR8",
+#     'authDomain': "surveiliadatabase.firebaseapp.com",
+#     'databaseURL': "https://surveiliadatabase.firebaseio.com",
+#     'projectId': "surveiliadatabase",
+#     'storageBucket': "surveiliadatabase.appspot.com",
+#     'messagingSenderId': "950425588555",
+#     'appId': "1:950425588555:web:597ccb15159a91b739cece",
+#     'measurementId': "G-RG2D1HGXKS"
+# }
+# firebase = pyrebase.initialize_app(firebaseConfig)
+# auth= firebase.auth()
 
 class ControlMainWindow(qtw.QMainWindow, Ui_surveiliaFrontEnd):
 
@@ -39,12 +51,15 @@ class ControlMainWindow(qtw.QMainWindow, Ui_surveiliaFrontEnd):
 
         # create media player object
         self.mediaPlayer = QMediaPlayer(None, QMediaPlayer.VideoSurface)
+        self.mediaPlayer2 = QMediaPlayer(None, QMediaPlayer.VideoSurface)
+
         # pass the widget where the video will be displayed
-        self.mediaPlayer.setVideoOutput(self.videoDisplay_widget)
+        self.mediaPlayer.setVideoOutput(self.videoDisplay_widget_1)
+        self.mediaPlayer2.setVideoOutput(self.videoDisplay_widget_2)
 
-        self.play_pushButton.clicked.connect(self.playVideo)
-        self.openVideo_pushButton.clicked.connect(self.openFile)
-
+        #self.play_pushButton.clicked.connect(self.playVideo)
+        self.openVideo_pushButton_1.clicked.connect(self.openFile)
+        self.openVideo_pushButton_2.clicked.connect(self.openFile2)
         self.cancel_pushButton_3.clicked.connect(self.close)
 
         # self.mediaPlayer.stateChanged.connect(self.mediastate_changed)
@@ -55,13 +70,25 @@ class ControlMainWindow(qtw.QMainWindow, Ui_surveiliaFrontEnd):
         if fileName != '':
             self.mediaPlayer.setMedia(QMediaContent(QUrl.fromLocalFile(fileName)))
             self.play_pushButton.setEnabled(True)
-
-    def playVideo(self):
         if self.mediaPlayer.state() == QMediaPlayer.PlayingState:
             self.mediaPlayer.pause()
-
         else:
             self.mediaPlayer.play()
+    def openFile2(self):
+        fileName2, _ = QFileDialog.getOpenFileName(self, "Open Video", "",
+                                                  "Video Files (*.mp4 *.flv *.ts *.mts *.avi *.wmv)")
+
+        if fileName2 != '':
+            self.mediaPlayer2.setMedia(QMediaContent(QUrl.fromLocalFile(fileName2)))
+            self.play_pushButton.setEnabled(True)
+        if self.mediaPlayer2.state() == QMediaPlayer.PlayingState:
+            self.mediaPlayer2.pause()
+        else:
+            self.mediaPlayer2.play()
+
+
+
+
 
     # def mediastate_changed(self):
     #     if self.mediaPlayer.state() == QMediaPlayer.PlayingState:
@@ -72,8 +99,12 @@ class ControlMainWindow(qtw.QMainWindow, Ui_surveiliaFrontEnd):
     #         self.play_pushButton.setIcon(
     #             self.style().standardIcon(QStyle.SP_MediaPlay)
     #         )
-
-
+    #def loginFunction(self):
+    #	email = self.username1_field.text()
+    #	password = self.password1_field.text()
+    #	try:
+    #	   auth.sign_in_with_email_and_password(email,password)
+	#except:
 if __name__ == "__main__":
     app = qtw.QApplication([])
     widget = ControlMainWindow()

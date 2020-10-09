@@ -78,13 +78,13 @@ background:transparent;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout_4">
+   <layout class="QVBoxLayout" name="verticalLayout_6">
     <item>
      <widget class="QStackedWidget" name="mainStackedWidget">
       <property name="styleSheet">
        <string notr="true">*{
 font-family: century gothic;
-background-color:#484644;
+background-color:#201f1f;
 }
 QLineEdit, QTextEdit{
 background: #201f1f;
@@ -109,7 +109,7 @@ background-color:black;
 </string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="login_page">
        <property name="styleSheet">
@@ -225,10 +225,10 @@ background:transparent;
              <widget class="QLabel" name="title1_label">
               <property name="geometry">
                <rect>
-                <x>120</x>
-                <y>80</y>
-                <width>171</width>
-                <height>40</height>
+                <x>100</x>
+                <y>90</y>
+                <width>221</width>
+                <height>71</height>
                </rect>
               </property>
               <property name="styleSheet">
@@ -774,10 +774,10 @@ font-size: 24px;</string>
               <widget class="QLabel" name="title_label">
                <property name="geometry">
                 <rect>
-                 <x>60</x>
-                 <y>30</y>
-                 <width>121</width>
-                 <height>21</height>
+                 <x>50</x>
+                 <y>20</y>
+                 <width>171</width>
+                 <height>41</height>
                 </rect>
                </property>
                <property name="text">
@@ -789,40 +789,213 @@ font-size: 24px;</string>
             <item>
              <widget class="QStackedWidget" name="menuStackedWidget">
               <property name="currentIndex">
-               <number>6</number>
+               <number>0</number>
               </property>
               <widget class="QWidget" name="camera_page">
-               <layout class="QVBoxLayout" name="verticalLayout">
+               <property name="styleSheet">
+                <string notr="true">*{
+font-family: century gothic;
+background-color:#605E5C ;
+}
+QLineEdit, QTextEdit{
+background: #201f1f;
+border:#201f1f;
+color:white;
+font-size:18px;
+}
+QLabel{
+color: white;
+font-size: 18px;
+
+}
+QPushButton, QToolButton{
+font-weight:bold;
+color:white ;
+background:#201f1f;
+}
+QPushButton:hover{
+color:white;
+background-color:black;
+}
+</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_8">
                 <item>
-                 <widget class="QLabel" name="video_label">
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
+                 <spacer name="verticalSpacer_14">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
                   </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Plain</enum>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
                   </property>
-                  <property name="lineWidth">
-                   <number>1</number>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
                   </property>
-                  <property name="midLineWidth">
-                   <number>1</number>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
-                 </widget>
+                 </spacer>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="camera_pushButton">
-                  <property name="text">
-                   <string>Video/Image</string>
+                 <layout class="QHBoxLayout" name="horizontalLayout_4">
+                  <item>
+                   <spacer name="horizontalSpacer_20">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                     <enum>QSizePolicy::Fixed</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>10</width>
+                      <height>10</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QVideoWidget" name="videoDisplay_widget_2" native="true">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: black;</string>
+                    </property>
+                    <widget class="QPushButton" name="openVideo_pushButton_2">
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>0</y>
+                       <width>431</width>
+                       <height>541</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>OPEN VIDEO</string>
+                     </property>
+                    </widget>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_19">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                     <enum>QSizePolicy::Fixed</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>10</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QVideoWidget" name="videoDisplay_widget_1" native="true">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: black;</string>
+                    </property>
+                    <widget class="QPushButton" name="openVideo_pushButton_1">
+                     <property name="geometry">
+                      <rect>
+                       <x>4</x>
+                       <y>0</y>
+                       <width>431</width>
+                       <height>541</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>OPEN VIDEO</string>
+                     </property>
+                    </widget>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_21">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                     <enum>QSizePolicy::Fixed</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>10</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_13">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
                   </property>
-                 </widget>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
                 </item>
                </layout>
               </widget>
               <widget class="QWidget" name="alarm_page">
+               <property name="styleSheet">
+                <string notr="true">*{
+font-family: century gothic;
+background-color:#605E5C ;
+}
+QLabel{
+color: white;
+font-size: 18px;
+}
+QTableWidget{ 
+  width: 100%;
+   padding: 10px;
+  text-align: left;
+color: white;
+ gridline-color: black;
+    font-size: 14px;
+}
+QHeaderView::section {
+background-color: #646464;
+color:white;
+    
+    padding: 2px;
+    border: 1px solid black;
+    font-size: 12px;
+font-weight:bold;
+
+}
+QTableWidget QTableCornerButton::section {
+    background-color: #646464;
+    border: 1px solid black;
+}</string>
+               </property>
                <layout class="QVBoxLayout" name="verticalLayout_3">
+                <item>
+                 <spacer name="verticalSpacer_2">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Minimum</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
                 <item>
                  <layout class="QHBoxLayout" name="horizontalLayout_24">
                   <item>
@@ -871,6 +1044,22 @@ font-size:24px</string>
                  </layout>
                 </item>
                 <item>
+                 <spacer name="verticalSpacer_9">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Minimum</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>1</width>
+                    <height>10</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
                  <layout class="QHBoxLayout" name="horizontalLayout_6">
                   <item>
                    <spacer name="horizontalSpacer_4">
@@ -903,33 +1092,7 @@ font-size:24px</string>
                      </size>
                     </property>
                     <property name="styleSheet">
-                     <string notr="true">QTableWidget{ 
-  width: 100%;
-   padding: 15px;
-  text-align: left;
-color: white;
-}
-
-
-QHeaderView::section {
-color:white;
-    background-color: #646464;
-    padding: 4px;
-    border: 1px solid black;
-    font-size: 16px;
-font-weight:bold;
-
-}
-
-QTableWidget {
-    gridline-color: black;
-    font-size: 14px;
-}
-
-QTableWidget QTableCornerButton::section {
-    background-color: #646464;
-    border: 1px solid black;
-}</string>
+                     <string notr="true"/>
                     </property>
                     <property name="frameShape">
                      <enum>QFrame::NoFrame</enum>
@@ -944,7 +1107,7 @@ QTableWidget QTableCornerButton::section {
                      <bool>true</bool>
                     </attribute>
                     <attribute name="horizontalHeaderDefaultSectionSize">
-                     <number>150</number>
+                     <number>140</number>
                     </attribute>
                     <attribute name="horizontalHeaderMinimumSectionSize">
                      <number>50</number>
@@ -960,34 +1123,29 @@ QTableWidget QTableCornerButton::section {
                     </attribute>
                     <row>
                      <property name="text">
-                      <string>New Row</string>
+                      <string>1</string>
                      </property>
                     </row>
                     <row>
                      <property name="text">
-                      <string>New Row</string>
+                      <string>2</string>
                      </property>
                     </row>
                     <row>
                      <property name="text">
-                      <string>New Row</string>
+                      <string>3</string>
                      </property>
                     </row>
                     <row>
                      <property name="text">
-                      <string>New Row</string>
+                      <string>4</string>
                      </property>
                     </row>
                     <row>
                      <property name="text">
-                      <string>New Row</string>
+                      <string>5</string>
                      </property>
                     </row>
-                    <column>
-                     <property name="text">
-                      <string>ID</string>
-                     </property>
-                    </column>
                     <column>
                      <property name="text">
                       <string>Camera ID</string>
@@ -1028,7 +1186,50 @@ QTableWidget QTableCornerButton::section {
                </layout>
               </widget>
               <widget class="QWidget" name="storage_page">
+               <property name="styleSheet">
+                <string notr="true">*{
+font-family: century gothic;
+background-color:#605E5C ;
+}
+QLineEdit, QTextEdit{
+background: #201f1f;
+border:#201f1f;
+color:white;
+font-size:18px;
+}
+QLabel{
+color: white;
+font-size: 18px;
+
+}
+QPushButton, QToolButton{
+font-weight:bold;
+color:white ;
+background:#201f1f;
+}
+QPushButton:hover{
+color:white;
+background-color:black;
+}
+</string>
+               </property>
                <layout class="QVBoxLayout" name="verticalLayout_4">
+                <item>
+                 <spacer name="verticalSpacer_3">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Minimum</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
                 <item>
                  <layout class="QHBoxLayout" name="horizontalLayout_9">
                   <item>
@@ -1075,6 +1276,22 @@ font-size:24px</string>
                    </spacer>
                   </item>
                  </layout>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_12">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Minimum</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>10</height>
+                   </size>
+                  </property>
+                 </spacer>
                 </item>
                 <item>
                  <layout class="QHBoxLayout" name="horizontalLayout_8">
@@ -1187,7 +1404,7 @@ color:white;</string>
                     <property name="styleSheet">
                      <string notr="true">QTableWidget{ 
   width: 100%;
-   padding: 15px;
+   padding: 10px;
   text-align: left;
 color: white;
 }
@@ -1196,9 +1413,9 @@ color: white;
 QHeaderView::section {
 color:white;
     background-color: #646464;
-    padding: 4px;
+    padding: 2px;
     border: 1px solid black;
-    font-size: 16px;
+    font-size: 12px;
 font-weight:bold;
 
 }
@@ -1233,39 +1450,34 @@ QTableWidget QTableCornerButton::section {
                     </attribute>
                     <row>
                      <property name="text">
-                      <string>New Row</string>
+                      <string>1</string>
                      </property>
                     </row>
                     <row>
                      <property name="text">
-                      <string>New Row</string>
+                      <string>2</string>
                      </property>
                     </row>
                     <row>
                      <property name="text">
-                      <string>New Row</string>
+                      <string>3</string>
                      </property>
                     </row>
                     <row>
                      <property name="text">
-                      <string>New Row</string>
+                      <string>4</string>
                      </property>
                     </row>
                     <row>
                      <property name="text">
-                      <string>New Row</string>
+                      <string>5</string>
                      </property>
                     </row>
                     <row>
                      <property name="text">
-                      <string>New Row</string>
+                      <string>6</string>
                      </property>
                     </row>
-                    <column>
-                     <property name="text">
-                      <string>ID</string>
-                     </property>
-                    </column>
                     <column>
                      <property name="text">
                       <string>Filename</string>
@@ -1301,9 +1513,52 @@ QTableWidget QTableCornerButton::section {
                </layout>
               </widget>
               <widget class="QWidget" name="accountInfo_page">
-               <layout class="QHBoxLayout" name="horizontalLayout_12">
+               <property name="styleSheet">
+                <string notr="true">*{
+font-family: century gothic;
+background-color:#605E5C ;
+}
+QLineEdit, QTextEdit{
+background: #201f1f;
+border:#201f1f;
+color:white;
+font-size:18px;
+}
+QLabel{
+color: white;
+font-size: 18px;
+
+}
+QPushButton, QToolButton{
+font-weight:bold;
+color:white ;
+background:#201f1f;
+}
+QPushButton:hover{
+color:white;
+background-color:black;
+}
+</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout">
                 <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_11">
+                 <spacer name="verticalSpacer_6">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Minimum</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_10">
                   <item>
                    <spacer name="horizontalSpacer_11">
                     <property name="orientation">
@@ -1400,6 +1655,9 @@ font-size:24px;</string>
                     </item>
                     <item row="5" column="1">
                      <widget class="QTextEdit" name="address_lineEdit">
+                      <property name="styleSheet">
+                       <string notr="true">border-radius: 0px;</string>
+                      </property>
                       <property name="html">
                        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -1453,7 +1711,50 @@ p, li { white-space: pre-wrap; }
                </layout>
               </widget>
               <widget class="QWidget" name="usersInfo_page">
+               <property name="styleSheet">
+                <string notr="true">*{
+font-family: century gothic;
+background-color:#605E5C ;
+}
+QLineEdit, QTextEdit{
+background: #201f1f;
+border:#201f1f;
+color:white;
+font-size:18px;
+}
+QLabel{
+color: white;
+font-size: 18px;
+
+}
+QPushButton, QToolButton{
+font-weight:bold;
+color:white ;
+background:#201f1f;
+}
+QPushButton:hover{
+color:white;
+background-color:black;
+}
+</string>
+               </property>
                <layout class="QVBoxLayout" name="verticalLayout_5">
+                <item>
+                 <spacer name="verticalSpacer">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Minimum</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
                 <item>
                  <layout class="QHBoxLayout" name="horizontalLayout_16">
                   <item>
@@ -1497,6 +1798,22 @@ font-size:24px;FONT-WEIGHT:BOLD;</string>
                    </spacer>
                   </item>
                  </layout>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_8">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>10</height>
+                   </size>
+                  </property>
+                 </spacer>
                 </item>
                 <item>
                  <layout class="QHBoxLayout" name="horizontalLayout_14">
@@ -1578,7 +1895,7 @@ font-size:24px;FONT-WEIGHT:BOLD;</string>
                     <property name="styleSheet">
                      <string notr="true">QTableWidget{ 
   width: 100%;
-   padding: 15px;
+   padding: 10px;
   text-align: left;
 color: white;
 }
@@ -1587,9 +1904,9 @@ color: white;
 QHeaderView::section {
 color:white;
     background-color: #646464;
-    padding: 4px;
+    padding: 2px;
     border: 1px solid black;
-    font-size: 16px;
+    font-size: 12px;
 font-weight:bold;
 
 }
@@ -1613,6 +1930,9 @@ QTableWidget QTableCornerButton::section {
                     <attribute name="horizontalHeaderCascadingSectionResizes">
                      <bool>true</bool>
                     </attribute>
+                    <attribute name="horizontalHeaderDefaultSectionSize">
+                     <number>130</number>
+                    </attribute>
                     <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
                      <bool>true</bool>
                     </attribute>
@@ -1624,34 +1944,29 @@ QTableWidget QTableCornerButton::section {
                     </attribute>
                     <row>
                      <property name="text">
-                      <string>New Row</string>
+                      <string>1</string>
                      </property>
                     </row>
                     <row>
                      <property name="text">
-                      <string>New Row</string>
+                      <string>2</string>
                      </property>
                     </row>
                     <row>
                      <property name="text">
-                      <string>New Row</string>
+                      <string>3</string>
                      </property>
                     </row>
                     <row>
                      <property name="text">
-                      <string>New Row</string>
+                      <string>4</string>
                      </property>
                     </row>
                     <row>
                      <property name="text">
-                      <string>New Row</string>
+                      <string>5</string>
                      </property>
                     </row>
-                    <column>
-                     <property name="text">
-                      <string>ID</string>
-                     </property>
-                    </column>
                     <column>
                      <property name="text">
                       <string>Name</string>
@@ -1692,20 +2007,90 @@ QTableWidget QTableCornerButton::section {
                </layout>
               </widget>
               <widget class="QWidget" name="help_page">
+               <property name="styleSheet">
+                <string notr="true">*{
+font-family: century gothic;
+background-color:#605E5C ;
+}
+QLineEdit, QTextEdit{
+background: #201f1f;
+border:#201f1f;
+color:white;
+font-size:18px;
+}
+QLabel{
+color: white;
+font-size: 18px;
+
+}
+QPushButton, QToolButton{
+font-weight:bold;
+color:white ;
+background:#201f1f;
+}
+QPushButton:hover{
+color:white;
+background-color:black;
+}
+</string>
+               </property>
                <layout class="QVBoxLayout" name="verticalLayout_12">
                 <item>
                  <widget class="QLabel" name="help_label">
                   <property name="text">
-                   <string>                                                                               HELP SECTION</string>
+                   <string>                                     HELP SECTION</string>
                   </property>
                  </widget>
                 </item>
                </layout>
               </widget>
               <widget class="QWidget" name="addNewUser_page">
-               <layout class="QHBoxLayout" name="horizontalLayout_26">
+               <property name="styleSheet">
+                <string notr="true">*{
+font-family: century gothic;
+background-color:#605E5C ;
+}
+QLineEdit, QTextEdit{
+background: #201f1f;
+border:#201f1f;
+color:white;
+font-size:18px;
+}
+QLabel{
+color: white;
+font-size: 18px;
+
+}
+QPushButton, QToolButton{
+font-weight:bold;
+color:white ;
+background:#201f1f;
+}
+QPushButton:hover{
+color:white;
+background-color:black;
+}
+</string>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_7">
                 <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_25">
+                 <spacer name="verticalSpacer_7">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Minimum</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_11">
                   <item>
                    <spacer name="horizontalSpacer_36">
                     <property name="orientation">
@@ -1802,6 +2187,9 @@ font-size:24px;</string>
                     </item>
                     <item row="5" column="1">
                      <widget class="QTextEdit" name="aAddress_lineEdit">
+                      <property name="styleSheet">
+                       <string notr="true">border-radius:0px;</string>
+                      </property>
                       <property name="html">
                        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -1972,10 +2360,10 @@ background:transparent;
            <widget class="QLabel" name="title3_label">
             <property name="geometry">
              <rect>
-              <x>120</x>
+              <x>100</x>
               <y>100</y>
-              <width>171</width>
-              <height>40</height>
+              <width>231</width>
+              <height>61</height>
              </rect>
             </property>
             <property name="styleSheet">
@@ -2021,7 +2409,7 @@ background:transparent;
              </rect>
             </property>
             <property name="styleSheet">
-             <string notr="true">font-size:20px;</string>
+             <string notr="true">font-size:18px;</string>
             </property>
             <property name="text">
              <string>You have been logged out!</string>
@@ -2066,9 +2454,16 @@ background:transparent;
    </layout>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QVideoWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">PyQt5.QtMultimediaWidgets</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="resource01.qrc"/>
-  <include location="D:/surveilia/SurveiliaFrontEnd/resource01.qrc"/>
  </resources>
  <connections/>
 </ui>
