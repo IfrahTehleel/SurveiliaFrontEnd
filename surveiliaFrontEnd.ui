@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1100</width>
-    <height>800</height>
+    <width>1166</width>
+    <height>830</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -78,7 +78,7 @@ background:transparent;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout_6">
+   <layout class="QHBoxLayout" name="horizontalLayout_4">
     <item>
      <widget class="QStackedWidget" name="mainStackedWidget">
       <property name="styleSheet">
@@ -788,6 +788,37 @@ font-size: 24px;</string>
             </item>
             <item>
              <widget class="QStackedWidget" name="menuStackedWidget">
+              <property name="styleSheet">
+               <string notr="true">*{
+font-family: century gothic;
+background-color:#605E5C ;
+}
+QLineEdit, QTextEdit{
+background: #201f1f;
+border:#201f1f;
+color:white;
+font-size:18px;
+}
+QLabel{
+color: white;
+font-size: 18px;
+
+}
+QPushButton, QToolButton{
+font-weight:bold;
+color:white ;
+background:#201f1f;
+}
+QPushButton:hover{
+color:white;
+background-color:black;
+}
+*{
+font-family: century gothic;
+background-color:#605E5C ;
+}
+</string>
+              </property>
               <property name="currentIndex">
                <number>0</number>
               </property>
@@ -819,132 +850,214 @@ background-color:black;
 }
 </string>
                </property>
-               <layout class="QVBoxLayout" name="verticalLayout_8">
-                <item>
-                 <spacer name="verticalSpacer_14">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
-                  </property>
-                  <property name="sizeType">
-                   <enum>QSizePolicy::Fixed</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>20</width>
-                    <height>40</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_4">
-                  <item>
-                   <spacer name="horizontalSpacer_20">
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                     <enum>QSizePolicy::Fixed</enum>
-                    </property>
-                    <property name="sizeHint" stdset="0">
-                     <size>
-                      <width>10</width>
-                      <height>10</height>
-                     </size>
-                    </property>
-                   </spacer>
-                  </item>
-                  <item>
-                   <widget class="QVideoWidget" name="videoDisplay_widget_2" native="true">
-                    <property name="styleSheet">
-                     <string notr="true">background-color: black;</string>
-                    </property>
-                    <widget class="QPushButton" name="openVideo_pushButton_2">
-                     <property name="geometry">
-                      <rect>
-                       <x>0</x>
-                       <y>0</y>
-                       <width>431</width>
-                       <height>541</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string>OPEN VIDEO</string>
-                     </property>
-                    </widget>
-                   </widget>
-                  </item>
-                  <item>
-                   <spacer name="horizontalSpacer_19">
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                     <enum>QSizePolicy::Fixed</enum>
-                    </property>
-                    <property name="sizeHint" stdset="0">
-                     <size>
-                      <width>10</width>
-                      <height>20</height>
-                     </size>
-                    </property>
-                   </spacer>
-                  </item>
-                  <item>
-                   <widget class="QVideoWidget" name="videoDisplay_widget_1" native="true">
-                    <property name="styleSheet">
-                     <string notr="true">background-color: black;</string>
-                    </property>
-                    <widget class="QPushButton" name="openVideo_pushButton_1">
-                     <property name="geometry">
-                      <rect>
-                       <x>4</x>
-                       <y>0</y>
-                       <width>431</width>
-                       <height>541</height>
-                      </rect>
-                     </property>
-                     <property name="text">
-                      <string>OPEN VIDEO</string>
-                     </property>
-                    </widget>
-                   </widget>
-                  </item>
-                  <item>
-                   <spacer name="horizontalSpacer_21">
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                     <enum>QSizePolicy::Fixed</enum>
-                    </property>
-                    <property name="sizeHint" stdset="0">
-                     <size>
-                      <width>10</width>
-                      <height>20</height>
-                     </size>
-                    </property>
-                   </spacer>
-                  </item>
-                 </layout>
-                </item>
-                <item>
-                 <spacer name="verticalSpacer_13">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
-                  </property>
-                  <property name="sizeType">
-                   <enum>QSizePolicy::Fixed</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>20</width>
-                    <height>40</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-               </layout>
+               <widget class="QVideoWidget" name="videoDisplay_widget1" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>50</y>
+                  <width>261</width>
+                  <height>241</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: black;</string>
+                </property>
+               </widget>
+               <widget class="QWidget" name="widget" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>840</x>
+                  <y>30</y>
+                  <width>191</width>
+                  <height>411</height>
+                 </rect>
+                </property>
+                <widget class="QLabel" name="cameras_label">
+                 <property name="geometry">
+                  <rect>
+                   <x>50</x>
+                   <y>10</y>
+                   <width>121</width>
+                   <height>41</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>CAMERAS</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="cam01_pushButton">
+                 <property name="geometry">
+                  <rect>
+                   <x>20</x>
+                   <y>60</y>
+                   <width>158</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>CAMERA_01</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="cam03_pushButton">
+                 <property name="geometry">
+                  <rect>
+                   <x>20</x>
+                   <y>160</y>
+                   <width>158</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>CAMERA_03</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="cam02_pushButton">
+                 <property name="geometry">
+                  <rect>
+                   <x>20</x>
+                   <y>110</y>
+                   <width>158</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>CAMERA_02</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="cam04_pushButton">
+                 <property name="geometry">
+                  <rect>
+                   <x>20</x>
+                   <y>210</y>
+                   <width>158</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>CAMERA_04</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="cam05_pushButton">
+                 <property name="geometry">
+                  <rect>
+                   <x>20</x>
+                   <y>260</y>
+                   <width>158</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>CAMERA_05</string>
+                 </property>
+                </widget>
+                <widget class="QPushButton" name="cam06_pushButton">
+                 <property name="geometry">
+                  <rect>
+                   <x>20</x>
+                   <y>310</y>
+                   <width>158</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>CAMERA_06</string>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QWidget" name="verticalLayoutWidget">
+                <property name="geometry">
+                 <rect>
+                  <x>870</x>
+                  <y>460</y>
+                  <width>160</width>
+                  <height>80</height>
+                 </rect>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_8">
+                 <item>
+                  <widget class="QPushButton" name="addNew_pushButton">
+                   <property name="text">
+                    <string>ADD NEW</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="showAll_pushButton">
+                   <property name="text">
+                    <string>SHOW ALL</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QVideoWidget" name="videoDisplay_widget2" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>300</x>
+                  <y>50</y>
+                  <width>261</width>
+                  <height>241</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: black;</string>
+                </property>
+               </widget>
+               <widget class="QVideoWidget" name="videoDisplay_widget3" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>580</x>
+                  <y>50</y>
+                  <width>261</width>
+                  <height>241</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: black;</string>
+                </property>
+               </widget>
+               <widget class="QWidget" name="widget_5" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>30</x>
+                  <y>330</y>
+                  <width>251</width>
+                  <height>231</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: black;</string>
+                </property>
+               </widget>
+               <widget class="QWidget" name="widget_7" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>580</x>
+                  <y>330</y>
+                  <width>261</width>
+                  <height>231</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: black;</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="opencvlabel">
+                <property name="geometry">
+                 <rect>
+                  <x>310</x>
+                  <y>340</y>
+                  <width>241</width>
+                  <height>221</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color:black;</string>
+                </property>
+                <property name="text">
+                 <string>OPENCV</string>
+                </property>
+               </widget>
               </widget>
               <widget class="QWidget" name="alarm_page">
                <property name="styleSheet">
@@ -2242,6 +2355,106 @@ p, li { white-space: pre-wrap; }
                  </layout>
                 </item>
                </layout>
+              </widget>
+              <widget class="QWidget" name="show2VideosPage">
+               <widget class="QVideoWidget" name="videoDisplay2_1" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>80</x>
+                  <y>90</y>
+                  <width>391</width>
+                  <height>381</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(0, 0, 0);</string>
+                </property>
+               </widget>
+               <widget class="QVideoWidget" name="videoDisplay2_2" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>510</x>
+                  <y>90</y>
+                  <width>401</width>
+                  <height>381</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(0, 0, 0);</string>
+                </property>
+               </widget>
+              </widget>
+              <widget class="QWidget" name="dialog_page">
+               <widget class="QFrame" name="frame">
+                <property name="geometry">
+                 <rect>
+                  <x>180</x>
+                  <y>110</y>
+                  <width>601</width>
+                  <height>451</height>
+                 </rect>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_9">
+                 <item>
+                  <widget class="QLabel" name="label">
+                   <property name="text">
+                    <string>Add camera using IP Address</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="addIPCam_field"/>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="addIPCam_pushButton">
+                   <property name="text">
+                    <string>ADD</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_2">
+                   <property name="text">
+                    <string>Add video by file from Directory</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="openDir_pushButton">
+                   <property name="text">
+                    <string>OPEN</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_3">
+                   <property name="text">
+                    <string>Add using Webcam</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="openWebcam_pushButton">
+                   <property name="text">
+                    <string>OPEN WEBCAM</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="cancel_PushButton">
+                   <property name="text">
+                    <string>CANCEL</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
               </widget>
              </widget>
             </item>
