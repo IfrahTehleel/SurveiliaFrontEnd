@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="logo">
+    <file>geography-24.png</file>
+    <file>geography-24.png</file>
     <file>play-24.png</file>
     <file>surveilialogo.PNG</file>
   </qresource>

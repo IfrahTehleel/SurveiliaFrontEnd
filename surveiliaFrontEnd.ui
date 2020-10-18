@@ -417,7 +417,7 @@ QToolButton:pressed{
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>90</y>
+             <y>100</y>
              <width>80</width>
              <height>71</height>
             </rect>
@@ -463,7 +463,7 @@ QToolButton:pressed{
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>230</y>
+             <y>270</y>
              <width>80</width>
              <height>71</height>
             </rect>
@@ -509,7 +509,7 @@ QToolButton:pressed{
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>520</y>
+             <y>630</y>
              <width>80</width>
              <height>71</height>
             </rect>
@@ -555,7 +555,7 @@ QToolButton:pressed{
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>380</y>
+             <y>450</y>
              <width>80</width>
              <height>71</height>
             </rect>
@@ -601,7 +601,7 @@ QToolButton:pressed{
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>450</y>
+             <y>540</y>
              <width>80</width>
              <height>71</height>
             </rect>
@@ -627,14 +627,15 @@ QToolButton:pressed{
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-repeat:no-repeat;</string>
+            <string notr="true">font-size:15px;
+background-repeat:no-repeat;</string>
            </property>
            <property name="text">
             <string>Language</string>
            </property>
            <property name="icon">
             <iconset resource="resource01.qrc">
-             <normaloff>:/menubar/geography-24.png</normaloff>:/menubar/geography-24.png</iconset>
+             <normaloff>:/logo/geography-24.png</normaloff>:/logo/geography-24.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -702,7 +703,7 @@ QToolButton:pressed{
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>160</y>
+             <y>190</y>
              <width>80</width>
              <height>71</height>
             </rect>
@@ -748,7 +749,7 @@ QToolButton:pressed{
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>300</y>
+             <y>360</y>
              <width>80</width>
              <height>71</height>
             </rect>

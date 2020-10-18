@@ -231,7 +231,7 @@ class Ui_surveiliaFrontEnd(object):
 "}")
         self.menuBar.setObjectName("menuBar")
         self.camera_toolButton = QtWidgets.QToolButton(self.menuBar)
-        self.camera_toolButton.setGeometry(QtCore.QRect(0, 90, 80, 71))
+        self.camera_toolButton.setGeometry(QtCore.QRect(0, 100, 80, 71))
         self.camera_toolButton.setMinimumSize(QtCore.QSize(80, 0))
         self.camera_toolButton.setMaximumSize(QtCore.QSize(80, 16777215))
         font = QtGui.QFont()
@@ -247,7 +247,7 @@ class Ui_surveiliaFrontEnd(object):
         self.camera_toolButton.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.camera_toolButton.setObjectName("camera_toolButton")
         self.storage_toolButton = QtWidgets.QToolButton(self.menuBar)
-        self.storage_toolButton.setGeometry(QtCore.QRect(0, 230, 80, 71))
+        self.storage_toolButton.setGeometry(QtCore.QRect(0, 270, 80, 71))
         self.storage_toolButton.setMinimumSize(QtCore.QSize(80, 0))
         self.storage_toolButton.setMaximumSize(QtCore.QSize(80, 16777215))
         font = QtGui.QFont()
@@ -263,7 +263,7 @@ class Ui_surveiliaFrontEnd(object):
         self.storage_toolButton.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.storage_toolButton.setObjectName("storage_toolButton")
         self.logout_toolButton = QtWidgets.QToolButton(self.menuBar)
-        self.logout_toolButton.setGeometry(QtCore.QRect(0, 520, 80, 71))
+        self.logout_toolButton.setGeometry(QtCore.QRect(0, 630, 80, 71))
         self.logout_toolButton.setMinimumSize(QtCore.QSize(80, 0))
         self.logout_toolButton.setMaximumSize(QtCore.QSize(80, 16777215))
         font = QtGui.QFont()
@@ -279,7 +279,7 @@ class Ui_surveiliaFrontEnd(object):
         self.logout_toolButton.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.logout_toolButton.setObjectName("logout_toolButton")
         self.users_toolButton = QtWidgets.QToolButton(self.menuBar)
-        self.users_toolButton.setGeometry(QtCore.QRect(0, 380, 80, 71))
+        self.users_toolButton.setGeometry(QtCore.QRect(0, 450, 80, 71))
         self.users_toolButton.setMinimumSize(QtCore.QSize(80, 0))
         self.users_toolButton.setMaximumSize(QtCore.QSize(80, 16777215))
         font = QtGui.QFont()
@@ -295,7 +295,7 @@ class Ui_surveiliaFrontEnd(object):
         self.users_toolButton.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.users_toolButton.setObjectName("users_toolButton")
         self.language_toolButton = QtWidgets.QToolButton(self.menuBar)
-        self.language_toolButton.setGeometry(QtCore.QRect(0, 450, 80, 71))
+        self.language_toolButton.setGeometry(QtCore.QRect(0, 540, 80, 71))
         self.language_toolButton.setMinimumSize(QtCore.QSize(80, 0))
         self.language_toolButton.setMaximumSize(QtCore.QSize(80, 16777215))
         font = QtGui.QFont()
@@ -304,9 +304,10 @@ class Ui_surveiliaFrontEnd(object):
         font.setBold(True)
         font.setWeight(75)
         self.language_toolButton.setFont(font)
-        self.language_toolButton.setStyleSheet("background-repeat:no-repeat;")
+        self.language_toolButton.setStyleSheet("font-size:15px;\n"
+"background-repeat:no-repeat;")
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap(":/menubar/geography-24.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap("geography-24.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.language_toolButton.setIcon(icon4)
         self.language_toolButton.setIconSize(QtCore.QSize(30, 30))
         self.language_toolButton.setCheckable(False)
@@ -330,7 +331,7 @@ class Ui_surveiliaFrontEnd(object):
         self.logo_toolButton.setToolButtonStyle(QtCore.Qt.ToolButtonIconOnly)
         self.logo_toolButton.setObjectName("logo_toolButton")
         self.alarm_toolButton = QtWidgets.QToolButton(self.menuBar)
-        self.alarm_toolButton.setGeometry(QtCore.QRect(0, 160, 80, 71))
+        self.alarm_toolButton.setGeometry(QtCore.QRect(0, 190, 80, 71))
         self.alarm_toolButton.setMinimumSize(QtCore.QSize(80, 0))
         self.alarm_toolButton.setMaximumSize(QtCore.QSize(80, 16777215))
         font = QtGui.QFont()
@@ -346,7 +347,7 @@ class Ui_surveiliaFrontEnd(object):
         self.alarm_toolButton.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.alarm_toolButton.setObjectName("alarm_toolButton")
         self.account_toolButton = QtWidgets.QToolButton(self.menuBar)
-        self.account_toolButton.setGeometry(QtCore.QRect(0, 300, 80, 71))
+        self.account_toolButton.setGeometry(QtCore.QRect(0, 360, 80, 71))
         self.account_toolButton.setMinimumSize(QtCore.QSize(80, 0))
         self.account_toolButton.setMaximumSize(QtCore.QSize(80, 16777215))
         font = QtGui.QFont()
@@ -1433,7 +1434,6 @@ class Ui_surveiliaFrontEnd(object):
 
 
 import resources01
-
 
 if __name__ == "__main__":
     import sys
