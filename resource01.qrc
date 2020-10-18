@@ -4,6 +4,7 @@
     <file>surveilialogo.PNG</file>
   </qresource>
   <qresource prefix="menubar">
+    <file>geography-24.png</file>
     <file>group-24.png</file>
     <file>question-mark-24.png</file>
     <file>logout-24.png</file>

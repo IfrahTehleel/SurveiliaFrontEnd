@@ -21,7 +21,7 @@ import urllib.request
 import cv2
 import numpy as np
 
-url = "http://192.168.0.103:8080/shot.jpg?rnd=372048"
+url = "http://192.168.0.103:8080/shot.jpg?rnd=693379"
 while True:
     imgResp = urllib.request.urlopen(url)
     imgNp = np.array(bytearray(imgResp.read()), dtype=np.uint8)
