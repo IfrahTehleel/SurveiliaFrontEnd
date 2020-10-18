@@ -642,6 +642,9 @@ QToolButton:pressed{
              <height>30</height>
             </size>
            </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
            <property name="toolButtonStyle">
             <enum>Qt::ToolButtonTextUnderIcon</enum>
            </property>
@@ -870,7 +873,7 @@ background-color:black;
 </string>
               </property>
               <property name="currentIndex">
-               <number>2</number>
+               <number>0</number>
               </property>
               <widget class="QWidget" name="welcome_page">
                <property name="styleSheet">
@@ -908,6 +911,12 @@ background-color:black;
                       <width>470</width>
                       <height>500</height>
                      </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton:hover{
+color:white;
+background-color:black;
+}</string>
                     </property>
                     <property name="frameShape">
                      <enum>QFrame::StyledPanel</enum>
@@ -973,9 +982,9 @@ background-color:black;
                      <property name="geometry">
                       <rect>
                        <x>60</x>
-                       <y>370</y>
+                       <y>357</y>
                        <width>251</width>
-                       <height>28</height>
+                       <height>41</height>
                       </rect>
                      </property>
                      <property name="styleSheet">

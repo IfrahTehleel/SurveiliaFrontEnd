@@ -48,14 +48,17 @@ class ControlMainWindow(qtw.QMainWindow, Ui_surveiliaFrontEnd):
         self.loginAgain_pushButton_3.clicked.connect(lambda: self.mainStackedWidget.setCurrentIndex(0))
 
         ######################## MENU STACKED WIDGET ##############################################
+        self.logo_toolButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(0))
+        self.getStarted_pushButton_2.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(1))
         self.camera_toolButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(1))
         self.alarm_toolButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(2))
         self.storage_toolButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(3))
         self.account_toolButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(4))
         self.users_toolButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(5))
-        self.language_toolButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(8))
         self.userAdd_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(6))
-        self.getStarted_pushButton_2.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(1))
+        self.language_toolButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(8))
+
+
 
         ##########################CAMERA PAGE####################################################
         self.cam02_pushButton.hide()
@@ -73,18 +76,18 @@ class ControlMainWindow(qtw.QMainWindow, Ui_surveiliaFrontEnd):
         self.addNew_pushButton.clicked.connect(self.addNewCamera)
         self.cancel_pushButton_3.clicked.connect(self.close)
 
-        self.cam01_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(8))
-        self.cam02_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(8))
-        self.cam03_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(8))
-        self.cam04_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(8))
-        self.cam05_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(8))
-        self.cam06_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(8))
+        self.cam01_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(7))
+        self.cam02_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(7))
+        self.cam03_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(7))
+        self.cam04_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(7))
+        self.cam05_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(7))
+        self.cam06_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(7))
 
-        ##########################PAGE 9####################################################
+        ##########################PAGE 7####################################################
         self.openDir_pushButton.clicked.connect(self.openFile)
         self.addIPCam_pushButton.clicked.connect(self.openIPcam)
         self.openWebcam_pushButton.clicked.connect(self.openWebcam)
-        self.cancel_PushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(0))
+        self.cancel_PushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(1))
 
         ######################## OPEN AND PLAY VIDEO ###############################################
         # create media player object

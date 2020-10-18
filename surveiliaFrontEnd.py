@@ -309,6 +309,7 @@ class Ui_surveiliaFrontEnd(object):
         icon4.addPixmap(QtGui.QPixmap(":/menubar/geography-24.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.language_toolButton.setIcon(icon4)
         self.language_toolButton.setIconSize(QtCore.QSize(30, 30))
+        self.language_toolButton.setCheckable(False)
         self.language_toolButton.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.language_toolButton.setObjectName("language_toolButton")
         self.logo_toolButton = QtWidgets.QToolButton(self.menuBar)
@@ -431,6 +432,10 @@ class Ui_surveiliaFrontEnd(object):
         sizePolicy.setHeightForWidth(self.frame_3.sizePolicy().hasHeightForWidth())
         self.frame_3.setSizePolicy(sizePolicy)
         self.frame_3.setMaximumSize(QtCore.QSize(470, 500))
+        self.frame_3.setStyleSheet("QPushButton:hover{\n"
+"color:white;\n"
+"background-color:black;\n"
+"}")
         self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_3.setObjectName("frame_3")
@@ -451,7 +456,7 @@ class Ui_surveiliaFrontEnd(object):
         self.welcome_label.setStyleSheet("font-size:28px;")
         self.welcome_label.setObjectName("welcome_label")
         self.getStarted_pushButton_2 = QtWidgets.QPushButton(self.frame_3)
-        self.getStarted_pushButton_2.setGeometry(QtCore.QRect(60, 370, 251, 28))
+        self.getStarted_pushButton_2.setGeometry(QtCore.QRect(60, 357, 251, 41))
         self.getStarted_pushButton_2.setStyleSheet("background-color:#1C1D25;\n"
 "")
         self.getStarted_pushButton_2.setObjectName("getStarted_pushButton_2")
@@ -1286,7 +1291,7 @@ class Ui_surveiliaFrontEnd(object):
 
         self.retranslateUi(surveiliaFrontEnd)
         self.mainStackedWidget.setCurrentIndex(1)
-        self.menuStackedWidget.setCurrentIndex(2)
+        self.menuStackedWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(surveiliaFrontEnd)
 
     def retranslateUi(self, surveiliaFrontEnd):
@@ -1427,7 +1432,7 @@ class Ui_surveiliaFrontEnd(object):
         self.loggedOut_label_3.setText(_translate("surveiliaFrontEnd", "You have been logged out!"))
 
 
-import resource01_rc
+import resources01
 
 
 if __name__ == "__main__":
