@@ -5,6 +5,7 @@ import urllib.request
 import cv2
 import numpy as np
 import xlrd
+import csv
 from PyQt5 import QtGui as qtg
 from PyQt5 import QtWidgets as qtw, QtWidgets, QtCore
 from PyQt5 import QtCore as qtc
@@ -13,24 +14,26 @@ from PyQt5.QtGui import QImage, QPixmap
 from PyQt5.QtWidgets import QFileDialog, QStyle
 from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent, QMediaPlaylist
 from surveiliaFrontEnd import Ui_surveiliaFrontEnd
-from PyQt5.QtMultimediaWidgets import QVideoWidget
-from PyQt5.QtWidgets import QPushButton
+import sqlite3
 
-# import pyrebase
-# firebaseConfig={
-#     'apiKey': "AIzaSyCie_t3hdNbn6zTLmO0NPgJs2nm-jFxxR8",
-#     'authDomain': "surveiliadatabase.firebaseapp.com",
-#     'databaseURL': "https://surveiliadatabase.firebaseio.com",
-#     'projectId': "surveiliadatabase",
-#     'storageBucket': "surveiliadatabase.appspot.com",
-#     'messagingSenderId': "950425588555",
-#     'appId': "1:950425588555:web:597ccb15159a91b739cece",
-#     'measurementId': "G-RG2D1HGXKS"
-# }
-# firebase = pyrebase.initialize_app(firebaseConfig)
-# auth= firebase.auth()
-
+"""
 count = 1
+connection = sqlite3.connect('surveilia_users.db')
+
+cursor = connection.cursor()
+
+command1 = CREATE
+TABLE
+IF
+NOT
+EXISTS
+users(user_id
+INTEGER
+PRIMARY
+KEY, fname
+TEXT, lname
+TEXT, C
+"""
 
 
 class ControlMainWindow(qtw.QMainWindow, Ui_surveiliaFrontEnd):
@@ -44,7 +47,7 @@ class ControlMainWindow(qtw.QMainWindow, Ui_surveiliaFrontEnd):
         self.menuStackedWidget.setCurrentIndex(0)
 
         ####################### MAIN STACKED WIDGET ###############################################
-        #self.login1_pushButton.clicked.connect(lambda: self.mainStackedWidget.setCurrentIndex(1))
+        # self.login1_pushButton.clicked.connect(lambda: self.mainStackedWidget.setCurrentIndex(1))
         self.logout_toolButton.clicked.connect(lambda: self.mainStackedWidget.setCurrentIndex(2))
         self.loginAgain_pushButton_3.clicked.connect(lambda: self.mainStackedWidget.setCurrentIndex(0))
 
@@ -52,7 +55,7 @@ class ControlMainWindow(qtw.QMainWindow, Ui_surveiliaFrontEnd):
         self.logo_toolButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(0))
         self.getStarted_pushButton_2.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(1))
         self.camera_toolButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(1))
-        self.alarm_toolButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(2))
+        # self.alarm_toolButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(2))
         self.storage_toolButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(3))
         self.account_toolButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(4))
         self.users_toolButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(5))
@@ -83,37 +86,6 @@ class ControlMainWindow(qtw.QMainWindow, Ui_surveiliaFrontEnd):
         self.cam05_pushButton.clicked.connect(self.cam5clicked)
         self.cam06_pushButton.clicked.connect(self.cam6clicked)
 
-        """
-        self.cam01_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(7))
-        self.cam02_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(7))
-        self.cam03_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(7))
-        self.cam04_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(7))
-        self.cam05_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(7))
-        self.cam06_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(7))
-        """
-
-        # self.cam01_pushButton.clicked.connect(self.funct)
-        # self.cam02_pushButton.clicked.connect(self.funct)
-        # self.cam03_pushButton.clicked.connect(self.cam01_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(7))funct)
-        #
-        # if self.cam01_pushButton.clicked:
-        #     self.flag = 1
-        #     print("STILL HERE")
-        # elif self.cam02_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(7)):
-        #     self.flag = 2
-        #     print("EEEE")
-        # elif self.cam03_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(7)):
-        #     self.flag = 3
-        #
-        # elif self.cam04_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(7)):
-        #     self.flag = 4
-        #
-        # elif self.cam05_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(7)):
-        #     self.flag = 5
-        #
-        # elif self.cam06_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(7)):
-        #     self.flag = 6
-
         ##########################PAGE 7####################################################
         self.openDir_pushButton.clicked.connect(self.openFile)
         self.addIPCam_pushButton.clicked.connect(self.openIPcam)
@@ -132,16 +104,34 @@ class ControlMainWindow(qtw.QMainWindow, Ui_surveiliaFrontEnd):
         #######################LOGIN###########################################
         self.login1_pushButton.clicked.connect(self.Login)
 
+        ######################READ CSV FILE TO DISPLAY DATA IN QTABLEWIDGET###################
+        self.alarm_toolButton.clicked.connect(self.anomaly_tableDetail)
+
+    def anomaly_tableDetail(self):
+        self.menuStackedWidget.setCurrentIndex(2)
+        self.anomaly_details = xlrd.open_workbook('UsersList.xlsx')
+        self.sheet = self.anomaly_details.sheet_by_index(0)
+        self.data = [[self.sheet.cell_value(r, c) for c in range(self.sheet.ncols)] for r in range(self.sheet.nrows)]
+        # print(self.data)
+        self.alarm_tableWidget.setColumnCount(4)
+        self.alarm_tableWidget.setRowCount(self.sheet.nrows - 1)  # same no.of rows as of csv file
+        for row, columnvalues in enumerate(self.data):
+            for column, value in enumerate(columnvalues):
+                self.item = QtWidgets.QTableWidgetItem(str(value))  # str is to also display the integer values
+                self.alarm_tableWidget.setItem(row - 1, column, self.item)
+                # to set the elements read only
+                self.item.setFlags(QtCore.Qt.ItemIsEnabled)
+
     def Login(self):
 
         self.excel = xlrd.open_workbook('UsersList.xlsx')
         self.sheet1 = self.excel.sheet_by_index(0)
 
         for row in range(self.sheet1.nrows):
-            #for id, username and password from excel
+            # for id, username and password from excel
 
             cellID = str(self.sheet1.cell(row, 0))
-            cellID = cellID.lstrip(":\'text") #to get data before text
+            cellID = cellID.lstrip(":\'text")  # to get data before text
             cellID = cellID.rstrip("\'")
 
             cellUserName = str(self.sheet1.cell(row, 1))
@@ -156,28 +146,19 @@ class ControlMainWindow(qtw.QMainWindow, Ui_surveiliaFrontEnd):
             cellPassword = cellPassword.lstrip(":\'text")
             cellPassword = cellPassword.rstrip("\'")
 
-            #to get values from gui
-            # print(cellPassword)
-            # print(cellUserName)
-            #Name = str(self.username1_field.toPlainText())
-            #Password = str(self.password1_field.toPlainText())
+            # to get values from gui
             Name = str(self.username1_field.text())
             Password = str(self.password1_field.text())
-            # print(Name)
-            # print(Password)
-            # print(cellUserName)
-            # print(cellPassword)
+
             if cellUserName == Name:
-                print("HERE")
+                #
                 if Password == cellPassword:
-                    print("login successful")
+                    print("Login Successful")
                     self.mainStackedWidget.setCurrentIndex(1)
                     break
                 else:
                     print("INVALID USERNAME OR PASSWORD")
 
-            else:
-                print("still in else")
             """
             else:
                 if (cellEmail == Name):
@@ -186,26 +167,6 @@ class ControlMainWindow(qtw.QMainWindow, Ui_surveiliaFrontEnd):
 
                         break
             """
-    """
-    def funct(self):
-        if self.cam01_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(7)):
-            self.flag = 1
-            print("STILL HERE")
-        elif self.cam02_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(7)):
-            self.flag = 2
-            print("EEEE")
-        elif self.cam03_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(7)):
-            self.flag = 3
-
-        elif self.cam04_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(7)):
-            self.flag = 4
-
-        elif self.cam05_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(7)):
-            self.flag = 5
-
-        elif self.cam06_pushButton.clicked.connect(lambda: self.menuStackedWidget.setCurrentIndex(7)):
-            self.flag = 6
-    """
 
     def cam1clicked(self):
         self.camSignal = 1
@@ -297,32 +258,6 @@ class ControlMainWindow(qtw.QMainWindow, Ui_surveiliaFrontEnd):
 
             cv2.waitKey(10)
 
-            # switcher = {
-            #      1:  self.display_1.setPixmap(qtg.QPixmap.fromImage(img1)),
-            #      2:  self.display_2.setPixmap(qtg.QPixmap.fromImage(img1)),
-            #      3:  self.display_3.setPixmap(qtg.QPixmap.fromImage(img1)),
-            #      4:  self.display_4.setPixmap(qtg.QPixmap.fromImage(img1)),
-            #      5:  self.display_5.setPixmap(qtg.QPixmap.fromImage(img1)),
-            #      6:  self.display_6.setPixmap(qtg.QPixmap.fromImage(img1))
-            #  }
-            """
-
-            if self.flag == 1:
-                self.display_1.setPixmap(qtg.QPixmap.fromImage(img1))
-            elif self.flag == 2:
-                self.display_2.setPixmap(qtg.QPixmap.fromImage(img1))
-            elif self.flag == 3:
-                self.display_3.setPixmap(qtg.QPixmap.fromImage(img1))
-            elif self.flag == 4:
-                self.display_4.setPixmap(qtg.QPixmap.fromImage(img1))
-            elif self.flag == 5:
-                self.display_5.setPixmap(qtg.QPixmap.fromImage(img1))
-            elif self.flag == 6:
-                self.display_6.setPixmap(qtg.QPixmap.fromImage(img1))
-
-            cv2.waitKey(10)
-            """
-
     # METHOD TO OPEN WEB CAM
     @pyqtSlot()
     def openWebcam(self):
@@ -370,59 +305,22 @@ class ControlMainWindow(qtw.QMainWindow, Ui_surveiliaFrontEnd):
         # pix = pix.scaled(self.display_1.width(), self.display_1.height(), QtCore.Qt.KeepAspectRatio, QtCore.Qt.SmoothTransformation)
         pix = pix.scaled(600, 450, QtCore.Qt.KeepAspectRatio, QtCore.Qt.SmoothTransformation)
         if (self.camSignal == 1):
-
             self.display_1.setPixmap(pix)
-            # self.camSignal = 0
 
         elif (self.camSignal == 2):
             self.display_2.setPixmap(pix)
-            # self.camSignal = 0
 
         elif (self.camSignal == 3):
-            # pix = pix.scaled(self.display_3.width(), self.display_3.height(), QtCore.Qt.KeepAspectRatio,QtCore.Qt.SmoothTransformation)
             self.display_3.setPixmap(pix)
-            # self.camSignal = 0
 
         elif (self.camSignal == 4):
-            # pix = pix.scaled(self.display_4.width(), self.display_4.height(), QtCore.Qt.KeepAspectRatio,QtCore.Qt.SmoothTransformation)
             self.display_4.setPixmap(pix)
-            # self.camSignal = 0
 
         elif (self.camSignal == 5):
-            # pix = pix.scaled(self.display_5.width(), self.display_5.height(), QtCore.Qt.KeepAspectRatio,QtCore.Qt.SmoothTransformation)
             self.display_5.setPixmap(pix)
-            # self.camSignal = 0
 
         elif (self.camSignal == 6):
-            # pix = pix.scaled(self.display_6.width(), self.display_6.height(), QtCore.Qt.KeepAspectRatio,QtCore.Qt.SmoothTransformation)
             self.display_6.setPixmap(pix)
-            # self.camSignal = 0
-
-        """
-        print(self.flag)
-        if self.flag == 1:
-            self.display_1.setPixmap(pix)
-            self.funct()
-        elif self.flag == 2:
-            self.display_2.setPixmap(pix)
-            self.funct()
-        elif self.flag == 3:
-            self.display_3.setPixmap(pix)
-            self.funct()
-        elif self.flag == 4:
-            self.display_4.setPixmap(pix)
-            self.funct()
-        elif self.flag == 5:
-            self.display_5.setPixmap(pix)
-            self.funct()
-        elif self.flag == 6:
-            self.display_6.setPixmap(pix)
-            self.funct()
-        else:
-            print("NO")
-        """
-
-    # self.display_1.setPixmap(pix)
 
     # METHOD TO OPEN FILE DIALOG
     def openFile(self):
@@ -433,7 +331,7 @@ class ControlMainWindow(qtw.QMainWindow, Ui_surveiliaFrontEnd):
             self.displayImage(fileName, 1)
         else:
             print("NO FILE FOUND")
-        display_1.play()
+        self.display_1.play()
         self.menuStackedWidget.setCurrentIndex(1)
 
     # METHOD TO ADD NEW CAMERAS
@@ -457,8 +355,9 @@ class ControlMainWindow(qtw.QMainWindow, Ui_surveiliaFrontEnd):
             self.addNew_pushButton.setEnabled(False)
             self.addNew_pushButton.setStyleSheet("background-color: light grey ;\n")
 
-            ############################TRANSLATE INTO URDU######################################
-            # METHOD TO CHANGE LANGUAGE
+    ############################TRANSLATE INTO URDU######################################
+
+    # METHOD TO CHANGE LANGUAGE
 
     def changeLanguagetoUrdu(self):
         # self.title1_label.setText("سرویلیا")

@@ -635,7 +635,7 @@ background-repeat:no-repeat;</string>
            </property>
            <property name="icon">
             <iconset resource="resource01.qrc">
-             <normaloff>:/logo/geography-24.png</normaloff>:/logo/geography-24.png</iconset>
+             <normaloff>:/menubar/geography-24.png</normaloff>:/menubar/geography-24.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -874,7 +874,7 @@ background-color:black;
 </string>
               </property>
               <property name="currentIndex">
-               <number>0</number>
+               <number>7</number>
               </property>
               <widget class="QWidget" name="welcome_page">
                <property name="styleSheet">
@@ -1530,7 +1530,7 @@ font-size:24px</string>
                     </property>
                     <property name="minimumSize">
                      <size>
-                      <width>800</width>
+                      <width>900</width>
                       <height>0</height>
                      </size>
                     </property>
@@ -1549,7 +1549,7 @@ color:white;
 
     padding: 2px;
     border: 1px solid black;
-    font-size: 12px;
+    font-size: 15px;
 font-weight:bold;
 
 }
@@ -1577,16 +1577,25 @@ QTableWidget QTableCornerButton::section {
                      <bool>true</bool>
                     </attribute>
                     <attribute name="horizontalHeaderDefaultSectionSize">
-                     <number>140</number>
+                     <number>200</number>
+                    </attribute>
+                    <attribute name="horizontalHeaderHighlightSections">
+                     <bool>true</bool>
                     </attribute>
                     <attribute name="horizontalHeaderMinimumSectionSize">
                      <number>50</number>
                     </attribute>
                     <attribute name="horizontalHeaderStretchLastSection">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </attribute>
                     <attribute name="verticalHeaderVisible">
                      <bool>false</bool>
+                    </attribute>
+                    <attribute name="verticalHeaderCascadingSectionResizes">
+                     <bool>false</bool>
+                    </attribute>
+                    <attribute name="verticalHeaderDefaultSectionSize">
+                     <number>40</number>
                     </attribute>
                     <attribute name="verticalHeaderMinimumSectionSize">
                      <number>30</number>
@@ -1623,17 +1632,17 @@ QTableWidget QTableCornerButton::section {
                     </column>
                     <column>
                      <property name="text">
+                      <string>Event</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>Date</string>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
                       <string>Time</string>
-                     </property>
-                    </column>
-                    <column>
-                     <property name="text">
-                      <string>Alarm Description</string>
-                     </property>
-                    </column>
-                    <column>
-                     <property name="text">
-                      <string>Anomaly Clip</string>
                      </property>
                     </column>
                    </widget>
@@ -1867,7 +1876,7 @@ color:white;</string>
                    <widget class="QTableWidget" name="storage_tableWidget">
                     <property name="minimumSize">
                      <size>
-                      <width>700</width>
+                      <width>900</width>
                       <height>0</height>
                      </size>
                     </property>
@@ -1886,7 +1895,7 @@ color:white;
 
     padding: 2px;
     border: 1px solid black;
-    font-size: 12px;
+    font-size: 15px;
 font-weight:bold;
 
 }
@@ -2377,7 +2386,7 @@ color:white;
     background-color:#1C1D25;
     padding: 2px;
     border: 1px solid black;
-    font-size: 12px;
+    font-size: 15px;
 font-weight:bold;
 
 }
@@ -2402,7 +2411,7 @@ QTableWidget QTableCornerButton::section {
                      <bool>true</bool>
                     </attribute>
                     <attribute name="horizontalHeaderDefaultSectionSize">
-                     <number>130</number>
+                     <number>160</number>
                     </attribute>
                     <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
                      <bool>true</bool>
